@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{566F7257-7555-4485-BC23-FF5A4D4EA32E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataCenter</RootNamespace>
+    <AssemblyName>DataCenter</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>NativeMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common">
+      <HintPath>..\..\bwtdev\Assets\Base\Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Engine">
+      <HintPath>..\..\bwtdev\Assets\DLL\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BwtDev\Library\UnityAssemblies\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Utility">
+      <HintPath>..\..\bwtdev\Assets\Base\Utility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonExtension.cs" />
+    <Compile Include="DataCenter.cs" />
+    <Compile Include="Define\ConstDefine.cs" />
+    <Compile Include="Define\GameDef.cs" />
+    <Compile Include="Define\GlobalEventDef.cs" />
+    <Compile Include="GameTableManager.cs" />
+    <Compile Include="GCExtensions.cs" />
+    <Compile Include="Generate\ProtocolProtobuf\PlatCommonProtocol.cs" />
+    <Compile Include="Generate\ProtocolProtobuf\PlatCommonProtocol.Serializer.cs" />
+    <Compile Include="Generate\ProtocolProtobuf\UserCommonProtocol.cs" />
+    <Compile Include="Generate\ProtocolProtobuf\UserCommonProtocol.Serializer.cs" />
+    <Compile Include="Generate\q\AcceptTokenDataBase.q.cs" />
+    <Compile Include="Generate\q\AchievementDataBase.q.cs" />
+    <Compile Include="Generate\q\ArenaClearCDCostDataBase.q.cs" />
+    <Compile Include="Generate\q\ArenaRankRewardDatabase.q.cs" />
+    <Compile Include="Generate\q\ArenaResetCostDataBase.q.cs" />
+    <Compile Include="Generate\q\ArtifactDataBase.q.cs" />
+    <Compile Include="Generate\q\BibleDataBase.q.cs" />
+    <Compile Include="Generate\q\BossAIDataBase.q.cs" />
+    <Compile Include="Generate\q\BossTalkDataBase.q.cs" />
+    <Compile Include="Generate\q\BuffDataBase.q.cs" />
+    <Compile Include="Generate\q\BuffUpgradeDataBase.q.cs" />
+    <Compile Include="Generate\q\CangBaoTuDataBase.q.cs" />
+    <Compile Include="Generate\q\ChapterDabaBase.q.cs" />
+    <Compile Include="Generate\q\CityDataBase.q.cs" />
+    <Compile Include="Generate\q\CityWarDataBase.q.cs" />
+    <Compile Include="Generate\q\ClanDonateDataBase.q.cs" />
+    <Compile Include="Generate\q\ClanDutyNameDataBase.q.cs" />
+    <Compile Include="Generate\q\ClanDutyPermDataBase.q.cs" />
+    <Compile Include="Generate\q\ClanMemberDataBase.q.cs" />
+    <Compile Include="Generate\q\ClanSkillDataBase.q.cs" />
+    <Compile Include="Generate\q\ClanUpgradeDataBase.q.cs" />
+    <Compile Include="Generate\q\CollectWordDataBase.q.cs" />
+    <Compile Include="Generate\q\ColorSuitDataBase.q.cs" />
+    <Compile Include="Generate\q\CompassDataBase.q.cs" />
+    <Compile Include="Generate\q\ComposeDataBase.q.cs" />
+    <Compile Include="Generate\q\ConsignmentCanSellItem.q.cs" />
+    <Compile Include="Generate\q\ConsignmentCateIDConf.q.cs" />
+    <Compile Include="Generate\q\ConsignmentFilterConf.q.cs" />
+    <Compile Include="Generate\q\CopyDataBase.q.cs" />
+    <Compile Include="Generate\q\CopyDisplayDataBase.q.cs" />
+    <Compile Include="Generate\q\CopyTargetDataBase.q.cs" />
+    <Compile Include="Generate\q\CopyTargetGuideDataBase.q.cs" />
+    <Compile Include="Generate\q\CountryBuffBase.q.cs" />
+    <Compile Include="Generate\q\DailyAnswerDatabase.q.cs" />
+    <Compile Include="Generate\q\DailyAwardDataBase.q.cs" />
+    <Compile Include="Generate\q\DailyCalendarDataBase.q.cs" />
+    <Compile Include="Generate\q\DailyDataBase.q.cs" />
+    <Compile Include="Generate\q\DailyTestDataBase.q.cs" />
+    <Compile Include="Generate\q\DeliverDatabase.q.cs" />
+    <Compile Include="Generate\q\EffectFuncDataBase.q.cs" />
+    <Compile Include="Generate\q\EquipAddBase.q.cs" />
+    <Compile Include="Generate\q\EquipComposeDataBase.q.cs" />
+    <Compile Include="Generate\q\EquipDataBase.q.cs" />
+    <Compile Include="Generate\q\EquipExchangeDataBase.q.cs" />
+    <Compile Include="Generate\q\EquipRefineDataBase.q.cs" />
+    <Compile Include="Generate\q\EquipSplitDataBase.q.cs" />
+    <Compile Include="Generate\q\FirstRechargeRewardDataBase.q.cs" />
+    <Compile Include="Generate\q\FishingDataBase.q.cs" />
+    <Compile Include="Generate\q\FrameEffectDataBase.q.cs" />
+    <Compile Include="Generate\q\FxResDataBase.q.cs" />
+    <Compile Include="Generate\q\GameGlobalConfig.q.cs" />
+    <Compile Include="Generate\q\GemComposeDataBase.q.cs" />
+    <Compile Include="Generate\q\GemPropertyDataBase.q.cs" />
+    <Compile Include="Generate\q\GemSuitDataBase.q.cs" />
+    <Compile Include="Generate\q\GodDemonDataBase.q.cs" />
+    <Compile Include="Generate\q\GridStrengthenDataBase.q.cs" />
+    <Compile Include="Generate\q\GridStrengthenSuitDataBase.q.cs" />
+    <Compile Include="Generate\q\GrowUpDabaBase.q.cs" />
+    <Compile Include="Generate\q\GrowUpFightPowerDabaBase.q.cs" />
+    <Compile Include="Generate\q\GrowUpFightPowerLevelDabaBase.q.cs" />
+    <Compile Include="Generate\q\GrowUpRecommendFightPowerDabaBase.q.cs" />
+    <Compile Include="Generate\q\GuideDataBase.q.cs" />
+    <Compile Include="Generate\q\GuideTriggerCondiDataBase.q.cs" />
+    <Compile Include="Generate\q\HeartSkillDataBase.q.cs" />
+    <Compile Include="Generate\q\HomeLandRecycleDatabase.q.cs" />
+    <Compile Include="Generate\q\HomeLandViewDatabase.q.cs" />
+    <Compile Include="Generate\q\HomeTradeDataBase.q.cs" />
+    <Compile Include="Generate\q\HotKeyDataBase.q.cs" />
+    <Compile Include="Generate\q\HoursemanShipUPDegree.q.cs" />
+    <Compile Include="Generate\q\HoursemanShipUPLevel.q.cs" />
+    <Compile Include="Generate\q\HuntingDataBase.q.cs" />
+    <Compile Include="Generate\q\IncreaseDataBase.q.cs" />
+    <Compile Include="Generate\q\InspireDataBase.q.cs" />
+    <Compile Include="Generate\q\ItemBindDataBase.q.cs" />
+    <Compile Include="Generate\q\ItemDataBase.q.cs" />
+    <Compile Include="Generate\q\ItemGetDataBase.q.cs" />
+    <Compile Include="Generate\q\ItemJumpDataBase.q.cs" />
+    <Compile Include="Generate\q\ItemUseTypeDataBase.q.cs" />
+    <Compile Include="Generate\q\JumpWayDataBase.q.cs" />
+    <Compile Include="Generate\q\LandAndFarmDataBase.q.cs" />
+    <Compile Include="Generate\q\LangTextDataBase.q.cs" />
+    <Compile Include="Generate\q\LoadingTipsDatabase.q.cs" />
+    <Compile Include="Generate\q\LocalTextDataBase.q.cs" />
+    <Compile Include="Generate\q\MailIconDataBase.q.cs" />
+    <Compile Include="Generate\q\MapDataBase.q.cs" />
+    <Compile Include="Generate\q\MineDataBase.q.cs" />
+    <Compile Include="Generate\q\ModeDiplayDataBase.q.cs" />
+    <Compile Include="Generate\q\MonsterWaveDatabase.q.cs" />
+    <Compile Include="Generate\q\NewFUNCOpenDataBase.q.cs" />
+    <Compile Include="Generate\q\NobleDataBase.q.cs" />
+    <Compile Include="Generate\q\NpcCampDataBase.q.cs" />
+    <Compile Include="Generate\q\NpcDataBase.q.cs" />
+    <Compile Include="Generate\q\NpcHeadMaskDataBase.q.cs" />
+    <Compile Include="Generate\q\NWGuardDataBase.q.cs" />
+    <Compile Include="Generate\q\OpenServerDataBase.q.cs" />
+    <Compile Include="Generate\q\PanelInfoDataBase.q.cs" />
+    <Compile Include="Generate\q\PetDataBase.q.cs" />
+    <Compile Include="Generate\q\PetGuiYuanDataBase.q.cs" />
+    <Compile Include="Generate\q\PetInHeritDataBase.q.cs" />
+    <Compile Include="Generate\q\PetRecommendDataBase.q.cs" />
+    <Compile Include="Generate\q\PetSkillLearnDataBase.q.cs" />
+    <Compile Include="Generate\q\PetSkillLevelUpDataBase.q.cs" />
+    <Compile Include="Generate\q\PetUpGradeDataBase.q.cs" />
+    <Compile Include="Generate\q\PetYinHunDataBase.q.cs" />
+    <Compile Include="Generate\q\PkMode.q.cs" />
+    <Compile Include="Generate\q\PointConsumeDataBase.q.cs" />
+    <Compile Include="Generate\q\PreloadResDataBase.q.cs" />
+    <Compile Include="Generate\q\PreloadSkillResDataBase.q.cs" />
+    <Compile Include="Generate\q\ProvinceDataBase.q.cs" />
+    <Compile Include="Generate\q\PublicTokenDataBase.q.cs" />
+    <Compile Include="Generate\q\QuestDataBase.q.cs" />
+    <Compile Include="Generate\q\QuestionDataBase.q.cs" />
+    <Compile Include="Generate\q\QuestItemDataBase.q.cs" />
+    <Compile Include="Generate\q\RandomNameDataBase.q.cs" />
+    <Compile Include="Generate\q\RandomTargetDataBase.q.cs" />
+    <Compile Include="Generate\q\RankDataBase.q.cs" />
+    <Compile Include="Generate\q\RankTypeDataBase.q.cs" />
+    <Compile Include="Generate\q\RechargeCostDataBase.q.cs" />
+    <Compile Include="Generate\q\RechargeDataBase.q.cs" />
+    <Compile Include="Generate\q\ReliveDataBase.q.cs" />
+    <Compile Include="Generate\q\ResourceDataBase.q.cs" />
+    <Compile Include="Generate\q\RewardFindDataBase.q.cs" />
+    <Compile Include="Generate\q\RideDataBase.q.cs" />
+    <Compile Include="Generate\q\RideExpandData.q.cs" />
+    <Compile Include="Generate\q\RideFeedData.q.cs" />
+    <Compile Include="Generate\q\RideSkillData.q.cs" />
+    <Compile Include="Generate\q\RideSkillDes.q.cs" />
+    <Compile Include="Generate\q\RightOrWrongDataBase.q.cs" />
+    <Compile Include="Generate\q\RobotDataBase.q.cs" />
+    <Compile Include="Generate\q\RSPropertyPromoteDataBase.q.cs" />
+    <Compile Include="Generate\q\RunestoneDataBase.q.cs" />
+    <Compile Include="Generate\q\ScheduleDataBase.q.cs" />
+    <Compile Include="Generate\q\SeedAndCubDataBase.q.cs" />
+    <Compile Include="Generate\q\SelectRoleDataBase.q.cs" />
+    <Compile Include="Generate\q\SensitiveWordDataBase.q.cs" />
+    <Compile Include="Generate\q\SequencerData.q.cs" />
+    <Compile Include="Generate\q\SequencerDialog.q.cs" />
+    <Compile Include="Generate\q\SettingDataBase.q.cs" />
+    <Compile Include="Generate\q\SevenDataBase.q.cs" />
+    <Compile Include="Generate\q\ShowEffect.q.cs" />
+    <Compile Include="Generate\q\ShowModelDataBase.q.cs" />
+    <Compile Include="Generate\q\SkillDatabase.q.cs" />
+    <Compile Include="Generate\q\SkillDoubleHitDataBase.q.cs" />
+    <Compile Include="Generate\q\StarQuestDataBase.q.cs" />
+    <Compile Include="Generate\q\StateDataBase.q.cs" />
+    <Compile Include="Generate\q\StoreDataBase.q.cs" />
+    <Compile Include="Generate\q\SuitDataBase.q.cs" />
+    <Compile Include="Generate\q\TabFuncDataBase.q.cs" />
+    <Compile Include="Generate\q\TeamActivityDatabase.q.cs" />
+    <Compile Include="Generate\q\TitleDataBase.q.cs" />
+    <Compile Include="Generate\q\Trailerdatabase.q.cs" />
+    <Compile Include="Generate\q\TransferChildTypeDataBase.q.cs" />
+    <Compile Include="Generate\q\TransferDatabase.q.cs" />
+    <Compile Include="Generate\q\TreasureBossDataBase.q.cs" />
+    <Compile Include="Generate\q\UIResourceDataBase.q.cs" />
+    <Compile Include="Generate\q\UnlockStoreDataBase.q.cs" />
+    <Compile Include="Generate\q\UpgradeAddDataBase.q.cs" />
+    <Compile Include="Generate\q\UpgradeDataBase.q.cs" />
+    <Compile Include="Generate\q\WeaponSoulGrowDataBase.q.cs" />
+    <Compile Include="Generate\q\WeaponSoulPropertyGradeDataBase.q.cs" />
+    <Compile Include="Generate\q\WeaponSoulUpgradeDataBase.q.cs" />
+    <Compile Include="Generate\q\WelfareDataBase.q.cs" />
+    <Compile Include="Generate\q\WishingTreeDataBase.q.cs" />
+    <Compile Include="Generate\TableConfig\TableConfig.cs" />
+    <Compile Include="Generate\TableConfig\TableConfig.Serializer.cs" />
+    <Compile Include="LocalTextEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpanUtil.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="TableExtensions.cs" />
+    <Compile Include="TableKey.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)$(OutDir)$(ProjectName).dll $(ProjectDir)..\..\bwtdev\Assets\DLL /s /e /y
+xcopy $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\..\bwtdev\Assets\DLL /s /e /y
+xcopy $(ProjectDir)$(OutDir)$(ProjectName).dll $(ProjectDir)..\..\ArtBmt\\ArtEditor\Assets\Engine\ /s /e /y 
+
+xcopy $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\..\ArtBmt\ArtEditor\Assets\Engine\ /s /e /y
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B24EEF5-70EC-429C-A1FE-5483B8658054}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EntitySystem</RootNamespace>
+    <AssemblyName>EntitySystem</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_PROFILER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataCenter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\DLL\DataCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\Base\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\DLL\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\DLL\Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="MapSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\DLL\MapSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BwtDev\Library\UnityAssemblies\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\Base\Utility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreatureState\CreatureBeginDead.cs" />
+    <Compile Include="CreatureState\CreatureMove.cs" />
+    <Compile Include="CreatureState\CreatureContrl.cs" />
+    <Compile Include="EntityCommpent\EntityCommpent.cs" />
+    <Compile Include="EntityCommpent\EntityMoveEndCallBack.cs" />
+    <Compile Include="EntityCommpent\EntityVisual.cs" />
+    <Compile Include="EntityConfig.cs" />
+    <Compile Include="EntityFactory\EntityFactory.cs" />
+    <Compile Include="EntityFactory\EntityManager.cs" />
+    <Compile Include="EntityPreLoadManager.cs" />
+    <Compile Include="EntityView\EntityView.cs" />
+    <Compile Include="EntityView\EntityViewCreator.cs" />
+    <Compile Include="Entity\Box.cs" />
+    <Compile Include="Entity\Creature.cs" />
+    <Compile Include="EntityCommpent\EntityMove.cs" />
+    <Compile Include="Entity\Entity.cs" />
+    <Compile Include="CreatureState\CreatureFight.cs" />
+    <Compile Include="CreatureState\CreatureIdle.cs" />
+    <Compile Include="CreatureState\CreatureDead.cs" />
+    <Compile Include="CreatureState\CreatureNormal.cs" />
+    <Compile Include="CreatureState\CreatureStateBase.cs" />
+    <Compile Include="EntitySystem.cs" />
+    <Compile Include="Entity\EntityFindCondition.cs" />
+    <Compile Include="Entity\FightCreature.cs" />
+    <Compile Include="Entity\Homeland\Animal.cs" />
+    <Compile Include="Entity\Homeland\HomeEntityBase.cs" />
+    <Compile Include="Entity\Homeland\Minerals.cs" />
+    <Compile Include="Entity\Homeland\Plant.cs" />
+    <Compile Include="Entity\Homeland\Puppet.cs" />
+    <Compile Include="Entity\Homeland\Soil.cs" />
+    <Compile Include="Entity\Homeland\Tree.cs" />
+    <Compile Include="Entity\Item.cs" />
+    <Compile Include="Entity\Monster.cs" />
+    <Compile Include="Entity\NPC.cs" />
+    <Compile Include="Entity\Part\EquipPart.cs" />
+    <Compile Include="Entity\Pet.cs" />
+    <Compile Include="Entity\Player.cs" />
+    <Compile Include="Entity\Robot.cs" />
+    <Compile Include="Entity\WorldObj.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\EntityHelper.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)$(OutDir)$(ProjectName).dll $(ProjectDir)..\..\bwtdev\Assets\DLL /s /e /y
+xcopy $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\..\bwtdev\Assets\DLL /s /e /y
+xcopy $(ProjectDir)$(OutDir)$(ProjectName).dll $(ProjectDir)..\..\ArtBmt\ArtEditor\Assets\Engine /s /e /y
+xcopy $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\..\ArtBmt\ArtEditor\Assets\Engine /s /e /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

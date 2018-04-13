@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D13136F-B694-48A6-AE11-DC3D20272232}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkillSystem</RootNamespace>
+    <AssemblyName>SkillSystem</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_PROFILER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\Base\Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DataCenter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\DLL\DataCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>..\..\bwtdev\Assets\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BwtDev\Assets\DLL\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="EntitySystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BwtDev\Assets\DLL\EntitySystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\DLL\Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BwtDev\Library\UnityAssemblies\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bwtdev\Assets\Base\Utility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DamageManager.cs" />
+    <Compile Include="SkillData\EffectNodeConfig.cs" />
+    <Compile Include="PlayerBuffPart.cs" />
+    <Compile Include="PlayerSkillPart_ISkillAttacker.cs" />
+    <Compile Include="PlayerSkillPart_OnMessage.cs" />
+    <Compile Include="SkillContion.cs" />
+    <Compile Include="SkillDataManager.cs" />
+    <Compile Include="SkillData\EffectNodeProp.cs" />
+    <Compile Include="SkillData\SkillEffectProp.cs" />
+    <Compile Include="SkillFSM\SkillAttackState.cs" />
+    <Compile Include="SkillCaster.cs" />
+    <Compile Include="SkillEffectHelper.cs" />
+    <Compile Include="SkillFSM\SkillNoneState.cs" />
+    <Compile Include="SkillFSM\SkillOverState.cs" />
+    <Compile Include="SkillFSM\SkillPrepareState.cs" />
+    <Compile Include="SkillFSM\SkillStateBase.cs" />
+    <Compile Include="SkillNodePool.cs" />
+    <Compile Include="SkillView\EffectNode\ActionNode.cs" />
+    <Compile Include="SkillView\EffectNode\ArrowFxHandle.cs" />
+    <Compile Include="SkillView\EffectNode\ArrowFxNode.cs" />
+    <Compile Include="SkillView\EffectNode\AttachFxNode.cs" />
+    <Compile Include="SkillView\EffectNode\EffectNode.cs" />
+    <Compile Include="SkillView\EffectNode\EventNode.cs" />
+    <Compile Include="SkillView\EffectNode\FollowFxHandle.cs" />
+    <Compile Include="SkillView\EffectNode\FollowFxNode.cs" />
+    <Compile Include="SkillView\EffectNode\MoveNode.cs" />
+    <Compile Include="SkillView\EffectNode\MultHitHandle.cs" />
+    <Compile Include="SkillView\EffectNode\MultHitNode.cs" />
+    <Compile Include="SkillView\EffectNode\PlaceFxHandle.cs" />
+    <Compile Include="SkillView\EffectNode\PlaceFxNode.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\ActionNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\ArrowFxNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\AttachFxNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\EffectNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\EventNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\FollowFxNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\MoveNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\MultHitNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\PlaceFxNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\ScaleTimeNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\ShakeCameraNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\SingleHitNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\Prop\SoundNodeProp.cs" />
+    <Compile Include="SkillView\EffectNode\ScaleTimeNode.cs" />
+    <Compile Include="SkillView\EffectNode\ShakeCameraNode.cs" />
+    <Compile Include="SkillView\EffectNode\SingleHitNode.cs" />
+    <Compile Include="SkillView\EffectNode\SoundNode.cs" />
+    <Compile Include="SkillView\EffectUtil.cs" />
+    <Compile Include="SkillView\EffectViewFactory.cs" />
+    <Compile Include="SkillView\ISkillEffectInterface.cs" />
+    <Compile Include="SkillData\SkillConfig.cs" />
+    <Compile Include="SkillView\SkillEffect.cs" />
+    <Compile Include="SkillView\SkillEffectManager.cs" />
+    <Compile Include="PlayerSkillPart.cs" />
+    <Compile Include="SkillSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkillData\SkillEffectTable.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)$(OutDir)$(ProjectName).dll $(ProjectDir)..\..\bwtdev\Assets\DLL /s /e /y
+xcopy $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\..\bwtdev\Assets\DLL /s /e /y
+xcopy $(ProjectDir)$(OutDir)$(ProjectName).dll $(ProjectDir)..\..\ArtBmt\ArtEditor\Assets\Engine /s /e /y
+xcopy $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\..\ArtBmt\ArtEditor\Assets\Engine /s /e /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
